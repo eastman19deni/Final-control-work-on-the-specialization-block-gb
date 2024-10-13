@@ -1,0 +1,1349 @@
+eastman@Eastman-Word:~/test$ ls
+
+eastman@Eastman-Word:~/test$ cat <<EOT >> pets.txt
+
+> cat dog hamster
+
+> dog 
+
+> hamster
+
+> EOT
+
+eastman@Eastman-Word:~/test$ cat pets.txt 
+
+cat dog hamster
+
+dog 
+
+hamster
+
+eastman@Eastman-Word:~/test$ cat <<EOT >> pack_animals.txt
+
+> horse
+
+> camel
+
+> donkey
+
+> EOT
+
+eastman@Eastman-Word:~/test$ cat pack_animals.txt
+
+horse
+
+camel
+
+donkey
+
+eastman@Eastman-Word:~/test$ cat pets.txt pack_animals.txt > animals.txt
+
+eastman@Eastman-Word:~/test$ cat animals.txt
+
+cat dog hamster
+
+dog 
+
+hamster
+
+horse
+
+camel
+
+donkey
+
+eastman@Eastman-Word:~/test$ mv animals.txt human_friend.txt
+
+eastman@Eastman-Word:~/test$ ls
+
+human_friend.txt  pack_animals.txt  pets.txt
+
+eastman@Eastman-Word:~/test$ cd 
+
+eastman@Eastman-Word:~$ cd ./test
+
+eastman@Eastman-Word:~/test$ mkdir newdir
+
+eastman@Eastman-Word:~/test$ mv human_friend.txt newdir
+
+eastman@Eastman-Word:~/test$ ls
+
+newdir  pack_animals.txt  pets.txt
+
+eastman@Eastman-Word:~/test$ ls newdir
+
+human_friend.txt
+
+eastman@Eastman-Word:~/test$ 
+
+eastman@Eastman-Word:~$ history 50
+
+  819  nano compose.yaml 
+
+  820  cd second/
+
+  821  ls
+
+  822  nano compose.yaml 
+
+  823  sudo su
+
+  824  cd ~
+
+  825  sudo apt install mysql
+
+  826  mkdir test
+
+  827  pwd
+
+  828  cat
+
+  829  cd 
+
+  830  cd ./test
+
+  831  ls
+832  cd 
+
+  833  cd test
+
+  834  clear
+
+  835  ls
+
+  836  cat <<EOT >> pets.txt
+
+cat dog hamster
+
+dog 
+
+hamster
+
+EOT
+
+
+
+  837  cat pets.txt 
+
+  838  cat <<EOT >> pack_animals.txt
+
+horse
+
+camel
+
+donkey
+
+EOT
+
+
+
+  839  cat pack_animals.txt
+
+  840  cat pets.txt pack_animals.txt > animals.txt
+
+  841  cat animals.txt
+
+  842  mv animals.txt human_friend.txt
+
+  843  ls
+
+  844  cd 
+
+  845  cd ./test
+
+  846  mkdir newdir
+
+  847  mv human_friend.txt newdir
+
+  848  ls
+
+  849  ls newdir
+
+  850  [200~wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.30-1_all.deb~
+
+  851  sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb
+
+  852  sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb
+
+  853  cd 
+
+  854  wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.30-1_all.deb
+
+  855  sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb
+
+  856  sudo apt update 
+
+  857  sudo apt install mysql-server
+
+  858  systemctl status mysql
+
+  859  wget -c http://ftp.ru.debian.org/debian/pool/main/n/nginx/nginx_1.22.1-9_amd63.deb
+
+  860  wget https://nginx.org/download/nginx-1.22.1.tar.gz
+
+  861  sudo dpkg -i nginx_1.22.1-9_amd64.deb
+
+  862  sudp apt install nginx
+
+  863  sudo apt install nginx
+
+  864  sudo apt-get install -f
+
+  865  sudo dpkg -r nginx nginx-common
+
+  866  sudo dpkg --r nginx nginx-common
+
+  867  sudo dpkg --remove nginx nginx-common
+
+  868  history 50
+
+eastman@Eastman-Word:~$ 
+
+eastman@Eastman-Word:~$ sudo mysql -u root -p
+
+Enter password: 
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+
+Your MySQL connection id is 9
+
+Server version: 8.0.39 MySQL Community Server - GPL
+
+
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+
+affiliates. Other names may be trademarks of their respective
+
+owners.
+
+
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+
+
+mysql> DROP datebase IF EXISTS HumanFriends;
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'datebase IF EXISTS HumanFriends' at line 1
+
+mysql> DROP datebase IF EXISTS HumanFriend;
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'datebase IF EXISTS HumanFriend' at line 1
+
+mysql> DROP database IF EXISTS HumanFriends;
+
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+
+
+mysql> CREATE database HumanFriends;
+
+Query OK, 1 row affected (0,00 sec)
+
+
+
+mysql> USE HumanFriends;
+
+Database changed
+
++--------------------+
+
+mysql> 
+
+mysql> SHOW DATABASES;
+
+| Database           |
+
++--------------------+
+
+| HumanFriends       |
+
+| geekbrains         |
+
+| information_schema |
+
+| mysql              |eastman@Eastman-Word:~/test$ ls
+
+eastman@Eastman-Word:~/test$ cat <<EOT >> pets.txt
+
+> cat dog hamster
+
+> dog 
+
+> hamster
+
+> EOT
+
+eastman@Eastman-Word:~/test$ cat pets.txt 
+
+cat dog hamster
+
+dog 
+
+hamster
+
+eastman@Eastman-Word:~/test$ cat <<EOT >> pack_animals.txt
+
+> horse
+
+> camel
+
+> donkey
+
+> EOT
+
+eastman@Eastman-Word:~/test$ cat pack_animals.txt
+
+horse
+
+camel
+
+donkey
+
+eastman@Eastman-Word:~/test$ cat pets.txt pack_animals.txt > animals.txt
+
+eastman@Eastman-Word:~/test$ cat animals.txt
+
+cat dog hamster
+
+dog 
+
+hamster
+
+horse
+
+camel
+
+donkey
+
+eastman@Eastman-Word:~/test$ mv animals.txt human_friend.txt
+
+eastman@Eastman-Word:~/test$ ls
+
+human_friend.txt  pack_animals.txt  pets.txt
+
+eastman@Eastman-Word:~/test$ cd 
+
+eastman@Eastman-Word:~$ cd ./test
+
+eastman@Eastman-Word:~/test$ mkdir newdir
+
+eastman@Eastman-Word:~/test$ mv human_friend.txt newdir
+
+eastman@Eastman-Word:~/test$ ls
+
+newdir  pack_animals.txt  pets.txt
+
+eastman@Eastman-Word:~/test$ ls newdir
+
+human_friend.txt
+
+eastman@Eastman-Word:~/test$ 
+
+eastman@Eastman-Word:~$ history 50
+
+  819  nano compose.yaml 
+
+  820  cd second/
+
+  821  ls
+
+  822  nano compose.yaml 
+
+  823  sudo su
+
+  824  cd ~
+
+  825  sudo apt install mysql
+
+  826  mkdir test
+
+  827  pwd
+
+  828  cat
+
+  829  cd 
+
+  830  cd ./test
+
+  831  ls
+
+  832  cd 
+
+  833  cd test
+
+  834  clear
+
+  835  ls
+
+  836  cat <<EOT >> pets.txt
+
+cat dog hamster
+
+dog 
+
+hamster
+
+EOT
+
+
+
+  837  cat pets.txt 
+
+  838  cat <<EOT >> pack_animals.txt
+
+horse
+
+camel
+
+donkey
+
+EOT
+
+
+
+  839  cat pack_animals.txt
+
+  840  cat pets.txt pack_animals.txt > animals.txt
+
+  841  cat animals.txt
+
+  842  mv animals.txt human_friend.txt
+
+  843  ls
+
+  844  cd 
+
+  845  cd ./test
+
+  846  mkdir newdir
+
+  847  mv human_friend.txt newdir
+
+  848  ls
+
+  849  ls newdir
+
+  850  [200~wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.30-1_all.deb~
+
+  851  sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb
+
+  852  sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb
+
+  853  cd 
+
+  854  wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.30-1_all.deb
+
+  855  sudo dpkg -i mysql-apt-config_0.8.30-1_all.deb
+
+  856  sudo apt update 
+
+  857  sudo apt install mysql-server
+
+  858  systemctl status mysql
+
+  859  wget -c http://ftp.ru.debian.org/debian/pool/main/n/nginx/nginx_1.22.1-9_amd63.deb
+
+  860  wget https://nginx.org/download/nginx-1.22.1.tar.gz
+
+  861  sudo dpkg -i nginx_1.22.1-9_amd64.deb
+
+  862  sudp apt install nginx
+
+  863  sudo apt install nginx
+
+  864  sudo apt-get install -f
+
+  865  sudo dpkg -r nginx nginx-common
+
+  866  sudo dpkg --r nginx nginx-common
+
+  867  sudo dpkg --remove nginx nginx-common
+
+  868  history 50
+
+eastman@Eastman-Word:~$ 
+
+eastman@Eastman-Word:~$ sudo mysql -u root -p
+
+Enter password: 
+
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+
+Your MySQL connection id is 9
+
+Server version: 8.0.39 MySQL Community Server - GPL
+
+
+
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
+
+
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+
+affiliates. Other names may be trademarks of their respective
+
+owners.
+
+
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+
+
+mysql> DROP datebase IF EXISTS HumanFriends;
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'datebase IF EXISTS HumanFriends' at line 1
+
+mysql> DROP datebase IF EXISTS HumanFriend;
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'datebase IF EXISTS HumanFriend' at line 1
+
+mysql> DROP database IF EXISTS HumanFriends;
+
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+
+
+mysql> CREATE database HumanFriends;
+
+Query OK, 1 row affected (0,00 sec)
+
+
+
+mysql> USE HumanFriends;
+
+Database changed
+
+mysql> 
+
+mysql> SHOW DATABASES;
+
+| newdb              |
+
+| performance_schema |
+
+| sys                |
+
++--------------------+
+
+7 rows in set (0,00 sec)
+
+
+
+mysql> # Вывод:
+
+mysql> +--------------------+
+
+    -> | Database           |
+
+    -> +--------------------+
+
+    -> | HumanFriends       |
+
+    -> | information_schema |
+
+    -> | mysql              |
+
+    -> | performance_schema |
+
+    -> | sys                |
+
+    -> +--------------------+
+
+    -> 5 rows in set (0,00 sec)
+
+    -> 
+
+    -> ;
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '+--------------------+
+
+| Database           |
+
++--------------------+
+
+| HumanFrie' at line 1
+
+mysql> DROP
+
+    -> ;
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+
+mysql> DROP databet (0,00 sec)
+
+
+
+mysql> SELECT * FROM Cats;
+
++--------+------------------+------------+-----------+--------+
+
+| id_cat | type_pack_animal | birth_day  | commands  | id_pet |ase if EXISTS HumanFriends;
+
+Query OK, 0 rows affected (0,02 sec)
+
+
+
+mysql> CREATE database HumanFriends;
+
+Query OK, 1 row affected (0,01 sec)
+
+
+
+mysql> USE HumanFriends ;
+
+Database changed
+
+mysql> SHOW DATABASES;
+
++--------------------+
+
+| Database           |
+
++--------------------+
+
+| HumanFriends       |
+
+| geekbrains         |
+
+| information_schema |
+
+| mysql              |
+
+| newdb              |
+
+| performance_schema |
+
+| sys                |
+
++--------------------+
+
+7 rows in set (0,00 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS HumanFriends;
+
+Query OK, 0 rows affected, 1 warning (0,01 sec)
+
+
+
+mysql> CREATE TABLE HumanFriends(
+
+    -> id_human_friend INT AUTO_INCREMENT PRIMARY KEY,
+
+    -> type_human_friend VARCHAR(255)
+
+    -> );
+
+Query OK, 0 rows affected (0,03 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS Pets;
+
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+
+
+mysql> CREATE TABLE Pets (
+
+    -> id_pet INT AUTO_INCREMENT PRIMARY KEY,
+
+    -> type_pet VARCHAR(255),
+
+    -> id_human_friend INT,
+
+    -> FOREIGN KEY (id_human_friend) REFERENCES HumanFriends(id_human_friend)
+
+    -> );
+
+Query OK, 0 rows affected (0,05 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS PackAnimals;
+
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+
+
+mysql> CREATE TABLE PackAnimals (
+
+    -> id_pack_animal INT AUTO INCREMENT PRIMARY KEY,
+
+    -> type_pack_animal VARCHAR(255),
+
+    -> id_human_friend INT,
+
+    -> FOREIGN KEY (id_human_friend) REFERENCES HumanFriends(id_human_friend)
+
+    -> );
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AUTO INCREMENT PRIMARY KEY,
+
+type_pack_animal VARCHAR(255),
+
+id_human_friend INT,
+
+' at line 2
+
+mysql> CREATE TABLE PackAnimals ( id_pack_animal INT AUTO_INCREMENT PRIMARY KEY, type_pack_animal VARCHAR(255), id_human_friend INT, FOREIGN KEY (id_human_friend) REFERENCES HumanFriends(id_human_friend) );
+
+Query OK, 0 rows affected (0,05 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS Cats;
+
+Query OK, 0 rows affected, 1 warning (0,01 sec)
+
+
+
+mysql> CREATE TABLE Cats( id_cat INT AUTO_INCREMENT PRIMARY KEY, type_pack_animal VARCHAR(255), birth_day DATE, commands TEXT, id_pet INT, FOREIGN KEY (id_pet) REFERENCES Pets(id_pet));
+
+Query OK, 0 rows affected (0,04 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS Dogs;
+
+Query OK, 0 rows affected, 1 warning (0,01 sec)
+
+
+
+mysql> CREATE TABLE Dogs( id_dog INT AUTO_INCREMENT PRIMARY KEY, type_pack_animal VARCHAR(255), birth_day DATE, commands TEXT, id_pet INT, FOREIGN KEY (id_pet) REFERENCES Pets(id_pet));
+
+Query OK, 0 rows affected (0,04 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS Hamsters;
+
+Query OK, 0 rows affected, 1 warning (0,01 sec)
+
+
+
+mysql> CREATE TABLE Hamsters( id_hamster INT AUTO_INCREMENT PRIMARY KEY, type_pack_animal VARCHAR(255), birth_day DATE, commands TEXT, id_pet INT, FOREIGN KEY (id_pet) REFERENCES Pets(id_pet));
+
+Query OK, 0 rows affected (0,05 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS Horses;
+
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+
+
+mysql> CREATE TABLE Horses( id_horse INT AUTO_INCREMENT PRIMARY KEY, type_pack_animal VARCHAR(255), birth_day DATE, commands TEXT, id_pet INT, FOREIGN KEY (id_pet) REFERENCES Pets(id_pet));
+
+Query OK, 0 rows affected (0,04 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS Camels;
+
+Query OK, 0 rows affected, 1 warning (0,01 sec)
+
+
+
+mysql> CREATE TABLE Camels( id_camel INT AUTO_INCREMENT PRIMARY KEY, type_pack_animal VARCHAR(255), birth_day DATE, commands TEXT, id_pet INT, FOREIGN KEY (id_pet) REFERENCES Pets(id_pet));
+
+Query OK, 0 rows affected (0,04 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS Donkeys;
+
+Query OK, 0 rows affected, 1 warning (0,01 sec)
+
+
+
+mysql> CREATE TABLE Donkeys( id_donkey INT AUTO_INCREMENT PRIMARY KEY, type_pack_animal VARCHAR(255), birth_day DATE, commands TEXT, id_pet INT, FOREIGN KEY (id_pet) REFERENCES Pets(id_pet));
+
+Query OK, 0 rows affected (0,03 sec)
+
+
+
+mysql> SHOW TABLES;
+
++------------------------+
+
+| Tables_in_HumanFriends |
+
++------------------------+
+
+| Camels                 |
+
+| Cats                   |
+
+| Dogs                   |
+
+| Donkeys                |
+
+| Hamsters               |
+
+| Horses                 |
+
+| HumanFriends           |
+
+| PackAnimals            |
+
+| Pets                   |
+
++------------------------+
+
+9 rows in set (0,01 sec)
+
+
+
+mysql> INSERT INTO HumanFriends (type_human_friend) VALUE ('Pet') ('packAnimal');
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '('packAnimal')' at line 1
+
+mysql> INSERT INTO HumanFriends (type_human_friend) VALUE ('Pet') ,('packAnimal');
+
+Query OK, 2 rows affected (0,01 sec)
+
+Records: 2  Duplicates: 0  Warnings: 0
+
+
+
+mysql> INSERT INTO Pets(type_pet , id_human_friend) VALUE('Cat', 1), ('Dog', 1),('Hamster', 1);
+
+Query OK, 3 rows affected (0,01 sec)
+
+Records: 3  Duplicates: 0  Warnings: 0
+
+
+
+mysql> INSERT INTO PackAnimals (type_pack_animal, id_human_friend) VALUE ('Horse',2),('Camel',2),(
+
+    -> 
+
+    -> 
+
+    -> 'Donkey', 2);
+
+Query OK, 3 rows affected (0,01 sec)
+
+Records: 3  Duplicates: 0  Warnings: 0
+
+
+
+mysql> INSERT INTO Cats(name, birth_day, commands, id_pet) VALUE ('Mars','1999-12-09','meow, pee',1);
+
+ERROR 1054 (42S22): Unknown column 'name' in 'field list'
+
+mysql> CREATE TABLE Donkeys( id_donkey INT AUTO_INCREMENT PRIMARY KEY, type_pack_animal,name VARCHAR(255), birth_day DATE, commands TEXT, id_pet INT, FOREIGN KEY (id_pet) REFERENCES Pets(id_pet));
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',name VARCHAR(255), birth_day DATE, commands TEXT, id_pet INT, FOREIGN KEY (id_p' at line 1
+
+mysql> INSERT INTO Cats(name, birth_day, commands, id_pet) VALUE ('1999-12-09','meow, pee',1);
+
+ERROR 1054 (42S22): Unknown column 'name' in 'field list'
+
+mysql> INSERT INTO Cats(birth_day, commands, id_pet) VALUE ('1999-12-09','meow, pee',1);
+
+Query OK, 1 row affected (0,01 sec)
+
+
+
+mysql> INSERT INTO Dogs(birth_day, commands, id_pet) VALUE ('1999-12-09','gaff, pee',1);
+
+Query OK, 1 row affected (0,01 sec)
+
+
+
+mysql> INSERT INTO Hamsters(birth_day, commands, id_pet) VALUE ('1999-12-09','everyearDIE, do Shit',3);
+
+Query OK, 1 row affected (0,01 sec)
+
+
+
+mysql> INSERT INTO Dogs(birth_day, commands, id_pet) VALUE ('1999-12-09','gaff, pee',2);
+
+Query OK, 1 row affected (0,01 sec)
+
+
+
+mysql> INSERT INTO Horse(birth_day, commands, id_pet) VALUE ('1999-12-09','run',1);
+
+ERROR 1146 (42S02): Table 'HumanFriends.Horse' doesn't exist
+
+mysql> INSERT INTO Horses(birth_day, commands, id_pet) VALUE ('1999-12-09','run',1);
+
+Query OK, 1 row affected (0,01 sec)
+
+
+
+mysql> INSERT INTO Camels(birth_day, commands, id_pet) VALUE ('1999-12-09','ThrowUp',2);
+
+Query OK, 1 row affected (0,01 sec)
+
+
+
+mysql> INSERT INTO Donkeys(birth_day, commands, id_pet) VALUE ('1999-12-09','Farting',3);
+
+Query OK, 1 row affected (0,01 sec)
+
+
+
+mysql> SELECT * FROM HumanFriends;
+
++-----------------+-------------------+
+
+| id_human_friend | type_human_friend |
+
++-----------------+-------------------+
+
+|               1 | Pet               |
+
+|               2 | packAnimal        |
+
++-----------------+-------------------+
+
+2 rows in set (0,00 sec)
+
+
+
+mysql> SELECT * FROM Pets;
+
++--------+----------+-----------------+
+
+| id_pet | type_pet | id_human_friend |
+
++--------+----------+-----------------+
+
+|      1 | Cat      |               1 |
+
+|      2 | Dog      |               1 |
+
+|      3 | Hamster  |               1 |
+
++--------+----------+-----------------+
+
+3 rows in set (0,00 sec)
+
+
+
+mysql> SELECT * FROM PackAnimals;
+
++----------------+------------------+-----------------+
+
+| id_pack_animal | type_pack_animal | id_human_friend |
+
++----------------+------------------+-----------------+
+
+|              1 | Horse            |               2 |
+
+|              2 | Camel            |               2 |
+
+|              3 | Donkey           |               2 |
+
++----------------+------------------+-----------------+
+
+3 rows in set (0,00 sec)
+
+
+
+mysql> SELECT * FROM Cats;
+
++--------+------------------+------------+-----------+--------+
+
+| id_cat | type_pack_animal | birth_day  | commands  | id_pet |
+
++--------+------------------+------------+-----------+--------+
+
+|      1 | NULL             | 1999-12-09 | meow, pee |      1 |
+
++--------+------------------+------------+-----------+--------+
+
+1 row in set (0,00 sec)
+
+
+
+mysql> SELECT * FROM Dogs;
+
++--------+------------------+------------+-----------+--------+
+
+| id_dog | type_pack_animal | birth_day  | commands  | id_pet |
+
++--------+------------------+------------+-----------+--------+
+
+|      1 | NULL             | 1999-12-09 | gaff, pee |      1 |
+
+|      2 | NULL             | 1999-12-09 | gaff, pee |      2 |
+
++--------+------------------+------------+-----------+--------+
+
+2 rows in set (0,00 sec)
+
+
+
+mysql> SELECT * FROM Hamsters;
+
++------------+------------------+------------+----------------------+--------+
+
+| id_hamster | type_pack_animal | birth_day  | commands             | id_pet |
+
++------------+------------------+------------+----------------------+--------+
+
+|          1 | NULL             | 1999-12-09 | everyearDIE, do Shit |      3 |
+
++------------+------------------+------------+----------------------+--------+
+
+1 row in set (0,00 sec)
+
+
+
+mysql> SELECT * FROM Horses;
+
++----------+------------------+------------+----------+--------+
+
+| id_horse | type_pack_animal | birth_day  | commands | id_pet |
+
++----------+------------------+------------+----------+--------+
+
+|        1 | NULL             | 1999-12-09 | run      |      1 |
+
++----------+------------------+------------+----------+--------+
+
+1 row in set (0,00 sec)
+
+
+
+mysql> SELECT * FROM Camels;
+
++----------+------------------+------------+----------+--------+
+
+| id_camel | type_pack_animal | birth_day  | commands | id_pet |
+
++----------+------------------+------------+----------+--------+
+
+|        1 | NULL             | 1999-12-09 | ThrowUp  |      2 |
+
++----------+------------------+------------+----------+--------+
+
+1 row in set (0,00 sec)
+
+
+
+mysql> SELECT * FROM Donkeys;
+
++-----------+------------------+------------+----------+--------+
+
+| id_donkey | type_pack_animal | birth_day  | commands | id_pet |
+
++-----------+------------------+------------+----------+--------+
+
+|         1 | NULL             | 1999-12-09 | Farting  |      3 |
+
++-----------+------------------+------------+----------+--------+
+
+1 row in set (0,00 sec)
+
+
+
+mysql> DELETE FROM Camels;
+
+Query OK, 1 row affected (0,01 sec)
+
+
+
+mysql> SELECT * FROM Camels;
+
+Empty set (0,00 sec)
+
+
+
+mysql> DROP TABLES IF EXISTS HorsesAndDonkeys;
+
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+
+
+mysql> CREATE TABLE HorsesAndDonkeys AS 
+
+    -> SELECT id_horse AS id,name,birth_day,commands,'Horse' AS type FROM Horses 
+
+    -> UNION
+
+    -> SELECTet (0,00 sec)
+
+
+
+mysql> SELECT * FROM Cats;
+
++--------+------------------+------------+-----------+--------+
+
+| id_cat | type_pack_animal | birth_day  | commands  | id_pet | id_donkey AS id,name,birth_day, commands, 'Donkey' AS type FROM Donkeys;
+
+ERROR 1054 (42S22): Unknown column 'name' in 'field list'
+
+mysql> CREATE TABLE HorsesAndDonkeys AS SELECT id_horse AS id,birth_day,commands,'Horse' AS type FROM Horses UNION SELECT id_donkey AS id,birth_day, commands, 'Donkey' AS type FROM Donkeys;
+
+Query OK, 2 rows affected (0,05 sec)
+
+Records: 2  Duplicates: 0  Warnings: 0
+
+
+
+mysql> SELECT * FROM HorsesAndDonkeys;
+
++----+------------+----------+--------+
+
+| id | birth_day  | commands | type   |
+
++----+------------+----------+--------+
+
+|  1 | 1999-12-09 | run      | Horse  |
+
+|  1 | 1999-12-09 | Farting  | Donkey |
+
++----+------------+----------+--------+
+
+2 rows in set (0,00 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS YoungAnimals;
+
+Query OK, 0 rows affected, 1 warning (0,00 sec)
+
+
+
+mysql> CREATE TABLE YoungAnimals AS 
+
+    -> SELECT id,birth_day,commands,type,
+
+    -> TIMESTAMPDIFF(MONTH, birth_day, commands,CURDATE()) AS age_in_months
+
+    -> FROM(
+
+    -> SELECT id_cats AS id, birth_day,commands, 
+
+    -> 
+
+    -> 'Cat' AS type FROM Cats
+
+    -> UNION ALL 
+
+    -> SELECT id_dog AS id, birth_day,commands, 'Dog' AS type FROM Dogs
+
+    -> UNION ALL 
+
+    -> SELECT id_hamster AS id, birth_day,commands, 'Hamster' AS type FROM Hamsters
+
+    -> UNION ALL
+
+    -> SELECT id AS id, birth_day,commands,type FROM HorsesAndDonkeys
+
+    -> ) AS AllAnimals
+
+    -> WHERE TIMESTAMPDIFF(MONTH, birth_day,CURDATE()) BETWEEN 12 AND 36;
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',CURDATE()) AS age_in_months
+
+FROM(
+
+SELECT id_cats AS id, birth_day,commands, 
+
+
+
+'' at line 3
+
+mysql> CREATE TABLE YoungAnimals AS  SELECT id,birth_day,commands,type, TIMESTAMPDIFF(MONTH, birth_day, commands,CURDATE()) AS age_in_months FROM( SELECT id_cats AS id, birth_day,commands,   'Cat' AS type FROM Cats UNION ALL SELECT id_dog AS id, birth_day,commands, 'Dog' AS type FROM Dogs UNION ALL SELECT id_hamster AS id, birth_day,commands, 'Hamster' AS type FROM Hamsters UNION ALL SELECT id AS id, birth_day,commands,type FROM HorsesAndDonkeys ) AS AllAnimals WHERE TIMESTAMPDIFF(MONTH, birth_day,CURDATE()) BETWEEN 12 AND 36;
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ',CURDATE()) AS age_in_months FROM( SELECT id_cats AS id, birth_day,commands,   '' at line 1
+
+mysql> DROP TABLE IF EXISTS YoungAnimals;
+
+Query OK, 0 rows affected, 1 warning (0,01 sec)
+
+
+
+mysql> CREATE TABLE YoungAnimals AS
+
+    -> SELECT id, name, birth_day, commands, type,
+
+    ->        TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) AS age_in_months
+
+    -> FROM (
+
+    ->     SELECT id_cat AS id, name, birth_day, commands, 'Cat' AS type FROM Cats
+
+    ->     UNION ALL
+
+    ->     SELECT id_dog AS id, name, birth_day, commands, 'Dog' AS type FROM Dogs
+
+    ->     UNION ALL
+
+    ->     SELECT id_hamster AS id, name, birth_day, commands, 'Hamster' AS type FROM Hamsters
+
+    ->     UNION ALL
+
+    ->     SELECT id AS id, name, birth_day, commands, type FROM HorsesAndDonkeys
+
+    -> ) AS AllAnimals
+
+    -> WHERE TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) BETWEEN 12 AND 36;
+
+ERROR 1054 (42S22): Unknown column 'name' in 'field list'
+
+mysql> CREATE TABLE YoungAnimals AS SELECT id, birth_day, commands, type,        TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) AS age_in_months FROM (     SELECT id_cat AS id, birth_day, commands, 'Cat' AS type FROM
+
+ Cats     UNION ALL     SELECT id_dog AS id, birth_day, commands, 'Dog' AS type FROM Dogs     UNION ALL     SELECT id_hamster AS id, birth_day, commands, 'Hamster' AS type FROM Hamsters     UNION ALL     SELECT id AS id, birth_day, commands, type FROM HorsesAndDonkeys ) AS AllAnimals WHERE TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) BETWEEN 12 AND 36;
+
+Query OK, 0 rows affected (0,03 sec)
+
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+
+mysql> SELECT * FROM YoungAnimals;
+
+Empty set (0,00 sec)
+
+
+
+mysql> CREATE TABLE YoungAnimals AS SELECT id, birth_day, commands, type,        TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) AS age_in_months FROM (     SELECT id_cat AS id, birth_day, commands, 'Cat' AS type FROM Cats     UNION ALL     SELECT id_dog AS id, birth_day, commands, 'Dog' AS type FROM Dogs     UNION ALL     SELECT id_hamster AS id, birth_day, commands, 'Hamster' AS type FROM Hamsters     UNION ALL     SELECT id AS id, birth_day, commands, type FROM HorsesAndDonkeys ) AS AllAnimals WHERE TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) BETWEEN 12 AND 36;
+
+ERROR 1050 (42S01): Table 'YoungAnimals' already exists
+
+mysql> SELECT * FROM YoungAnimals;
+
+Empty set (0,00 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS YoungAnimals;
+
+Query OK, 0 rows affected (0,02 sec)
+
+
+
+mysql> CREATE TABLE YoungAnimals AS SELECT id, birth_day, commands, type,        TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) AS age_in_months FROM (     SELECT id_cat AS id, birth_day, commands, 'Cat' AS type FROM Cats     UNION ALL     SELECT id_dog AS id, birth_day, commands, 'Dog' AS type FROM Dogs     UNION ALL     SELECT id_hamster AS id, birth_day, commands, 'Hamster' AS type FROM Hamsters     UNION ALL     SELECT id AS id, birth_day, commands, type FROM HorsesAndDonkeys ) AS AllAnimals WHERE TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) BETWEEN 12 AND 36;
+
+Query OK, 0 rows affected (0,04 sec)
+
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+
+mysql> CREATE TABLE YoungAnimals AS SELECT id, birth_day, commands, type,        TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) AS age_in_months FROM (     SELECT id_cat AS id, birth_day, commands, 'Cat' AS type FROM Cats     UNION ALL     SELECT id_dog AS id, birth_day, commands, 'Dog' AS type FROM Dogs     UNION ALL     SELECT id_hamster AS id, birth_day, commands, 'Hamster' AS type FROM Hamsters     UNION ALL     SELECT id AS id, birth_day, commands, type FROM HorsesAndDonkeys ) AS AllAnimals WHERE TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) BETWEEN 1 AND 999;
+
+ERROR 1050 (42S01): Table 'YoungAnimals' already exists
+
+mysql> DROP TABLE IF EXISTS YoungAnimals;
+
+Query OK, 0 rows affected (0,02 sec)
+
+
+
+mysql> CREATE TABLE YoungAnimals AS SELECT id, birth_day, commands, type,        TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) AS age_in_months FROM (     SELECT id_cat AS id, birth_day, commands, 'Cat' AS type FROM Cats     UNION ALL     SELECT id_dog AS id, birth_day, commands, 'Dog' AS type FROM Dogs     UNION ALL     SELECT id_hamster AS id, birth_day, commands, 'Hamster' AS type FROM Hamsters     UNION ALL     SELECT id AS id, birth_day, commands, type FROM HorsesAndDonkeys ) AS AllAnimals WHERE TIMESTAMPDIFF(MONTH, birth_day, CURDATE()) BETWEEN 1 AND 999;
+
+Query OK, 6 rows affected (0,04 sec)
+
+Records: 6  Duplicates: 0  Warnings: 0
+
+
+
+mysql> SELECT * FROM YoungAnimals;
+
++----+------------+----------------------+---------+---------------+
+
+| id | birth_day  | commands             | type    | age_in_months |
+
++----+------------+----------------------+---------+---------------+
+
+|  1 | 1999-12-09 | meow, pee            | Cat     |           298 |
+
+|  1 | 1999-12-09 | gaff, pee            | Dog     |           298 |
+
+|  2 | 1999-12-09 | gaff, pee            | Dog     |           298 |
+
+|  1 | 1999-12-09 | everyearDIE, do Shit | Hamster |           298 |
+
+|  1 | 1999-12-09 | run                  | Horse   |           298 |
+
+|  1 | 1999-12-09 | Farting              | Donkey  |           298 |
+
++----+------------+----------------------+---------+---------------+
+
+6 rows in set (0,00 sec)
+
+
+
+mysql> DROP TABLE IF EXISTS AllAnimals;
+
+Query OK, 0 rows affected, 1 warning (0,01 sec)
+
+
+
+mysql> CREATE TABLE AllAnimals AS
+
+    -> SELECT id_cat AS id, name, birth_day, commands, 'Cat' AS type FROM Cats
+
+    -> UNION
+
+    -> SELECT id_dog AS id, name, birth_day, commands, 'Dog' AS type FROM Dogs
+
+    -> UNION
+
+    -> SELECT id_hamster AS id, name, birth_day, commands, 'Hamster' AS type FROM Hamsters
+
+    -> UNION
+
+    -> SELECT id AS id, name, birth_day, commands, type FROM HorsesAndDonkeys
+
+    -> UNION
+
+    -> SELECT id AS id, birth_day, commands, type FROM YoungAnimals;
+
+ERROR 1054 (42S22): Unknown column 'name' in 'field list'
+
+mysql> CREATE TABLE AllAnimals AS SELECT id_cat AS id, birth_day, commands, 'Cat' AS type FROM Cats UNION SELECT id_dog AS id, birth_day, commands, 'Dog' AS type FROM Dogs UNION SELECT id_hamster AS id, birth_day, commands, 'Hamster' AS type FROM Hamsters UNION SELECT id AS id, birth_day, commands, type FROM HorsesAndDonkeys UNION SELECT id AS id, birth_day, commands, type FROM YoungAnimals;
+
+Query OK, 6 rows affected (0,03 sec)
+
+Records: 6  Duplicates: 0  Warnings: 0
+
+
+
+mysql> SELECT * FROM AllAnimals;
+
++----+------------+----------------------+---------+
+
+| id | birth_day  | commands             | type    |
+
++----+------------+----------------------+---------+
+
+|  1 | 1999-12-09 | meow, pee            | Cat     |
+
+|  1 | 1999-12-09 | gaff, pee            | Dog     |
+
+|  2 | 1999-12-09 | gaff, pee            | Dog     |
+
+|  1 | 1999-12-09 | everyearDIE, do Shit | Hamster |
+
+|  1 | 1999-12-09 | run                  | Horse   |
+
+|  1 | 1999-12-09 | Farting              | Donkey  |
+
++----+------------+----------------------+---------+
+
+6 rows in set (0,00 sec)
+
+
+
+mysql> 
+
